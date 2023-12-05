@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <a routerLink="/sign-in" class="text">Already have an account?</a>
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="form">
+      <input
+        class="input"
+        type="text"
+        formControlName="username"
+        id="username"
+        placeholder="username"
+      />
+      <input
+        class="input"
+        type="text"
+        formControlName="email"
+        id="email"
+        placeholder="email"
+      />
+      <input
+        placeholder="password"
+        class="input"
+        type="password"
+        formControlName="password"
+        id="password"
+      />
+      <div class="button">
+        <button [disabled]="buttonDisabled" class="button-9" type="submit">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
